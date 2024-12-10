@@ -94,6 +94,9 @@ textarea {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   margin-bottom: 21px;
+  &::placeholder {
+    font-size: 16px;
+  }
 }
 
 .uplodImageDirectMessages {
@@ -496,16 +499,17 @@ button {
   justify-content: flex-start;
   box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.08);
   padding-inline: 1.5rem;
-  padding-block: 1rem;
+  padding-block: 1.1rem;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  gap: 1rem;
+  gap: 1.5rem;
   height: 40px;
   margin-bottom: auto;
 
   > span {
     text-transform: capitalize;
     font-weight: 700;
+    font-size: 22px;
   }
 
   > button {
@@ -535,6 +539,7 @@ button {
   > .username {
     font-weight: 700;
     align-self: flex-end;
+    font-size: 16px;
   }
 }
 
@@ -544,7 +549,7 @@ button {
 
 .self-room {
   color: #686868;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 1rem;
 
   > span {
@@ -596,6 +601,7 @@ button {
 
 .conversation-start {
   margin-bottom: 1rem;
+  font-size: 16px;
 }
 
 @media (width<630px) {

@@ -1,265 +1,9 @@
-// .loginInputsContainer {
-//     margin-top: 30px;
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     gap: 40px;
-//     margin-bottom: 40px;
-
-//     .link {
-//         color: #797EF3;
-//         padding: 8px 10px;
-
-//         &:hover {
-//             cursor: pointer;
-//             font-weight: 580;
-//             background-color: rgb(241, 241, 241);
-//             border: 1px solid rgb(241, 241, 241);
-//             border-radius: 30px;
-//             padding: 7px 10px;
-//         }
-
-//     }
-// }
-
-// section {
-//     display: flex;
-//     justify-content: center;
-
-//     main {
-//         height:650px;
-//     }
-
-// }
-
-// main {
-//     display: flex;
-//     justify-content: center;
-// }
-
-// mat-card {
-//     background-color: white;
-//     border-radius: 20px;
-//     height: 745px;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-
-//     .info {
-//         margin-top: 50px;
-//         padding: 0 40px;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: space-evenly;
-//         height: 133px;
-
-//         .title {
-//             color: rgb(68, 77, 242);
-//             font-weight: 700;
-//             font-size: 46px;
-//             margin-bottom: 30px;
-//         }
-
-//         .description {
-//             font-weight: 400;
-//             font-size: 16px;
-//         }
-//     }
-// }
-
-// form {
-//     width: 80%;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     margin-bottom: 20px;
-// }
-
-// .seperator {
-//     display: flex;
-//     align-items: center;
-//     gap: 5px;
-//     width: 100%;
-//     margin-bottom: 40px;
-// }
-
-// .underline {
-//     border-bottom: 1px solid black;
-//     width: 100%;
-// }
-
-// .inputField {
-//     border-radius: 30px;
-//     border: 1px solid transparent;
-//     width: 100%;
-//     height: 60px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     background-color: rgb(236, 238, 254);
-//     gap: 20px;
-
-//     &:hover {
-//         border: 1px solid gray;
-//         cursor: pointer;
-//     }
-
-//     input {
-//         width: 80%;
-//         height: 80%;
-//         font-size: 20px;
-//         background-color: rgb(236, 238, 254);
-//         border: 0;
-
-//         &:hover {
-//             cursor: pointer;
-//         }
-
-//         &:focus-visible {
-//             outline: unset;
-//         }
-//     }
-// }
-
-// .googleLogin {
-//     border-radius: 30px;
-//     width: 100%;
-//     height: 60px;
-//     background-color: rgb(236, 238, 254);
-//     display: flex;
-//     border: 1px solid transparent;
-//     justify-content: center;
-//     align-items: center;
-//     color: #797EF3;
-//     margin-bottom: 40px;
-//     gap: 10px;
-
-//     img {
-//         width: 38px;
-//         height: auto;
-//     }
-
-//     &:hover {
-//         cursor: pointer;
-//         font-weight: 580;
-//         border: 1px solid blue;
-//     }
-// }
-
-// .buttonContainer {
-//     display: flex;
-//     gap: 20px;
-// }
-
-// .button {
-//     border-radius: 20px;
-//     padding: 8px;
-//     width: 150px;
-//     border: 1px solid;
-
-//     &:hover {
-//         cursor: pointer;
-//     }
-// }
-
-// .loginButton {
-//     color: white;
-//     background-color: rgb(68, 77, 242);
-//     border-color: rgb(121, 126, 243);
-
-//     &:hover {
-//         background-color: rgba(121, 126, 243, 0.8);
-//     }
-// }
-
-// .guestLoginButton {
-//     background-color: white;
-//     color: rgb(121, 126, 243);
-//     border-color: rgb(121, 126, 243);
-
-//     &:hover {
-//         color: white;
-//         background-color: rgba(121, 126, 243, 0.8)
-//     }
-// }
-
-// .divAsButton {
-//     justify-content: center;
-//     display: flex;
-// }
-
-// .error {
-//     color: red;
-//     height: 20px;
-// }
-
-// @media(max-width:710px) {
-//     main {
-//         width: calc(100% - 20px);
-//     }
-// }
-
-// @media(max-width:610px) {
-//     section {
-//         margin-top: -30px;
-//     }
-// }
-
-// @media(max-width:430px) {
-//     .inputField {
-//         input {
-//             width: 70%;
-//             border-radius: 0 30px 30px 0;
-//             font-size: 15px;
-//         }
-//     }
-// }
-
-// @media(max-width:380px) {
-//     .button {
-//         width: 120px;
-//     }
-// }
-
-// @media(max-width:340px) {
-//     main {
-//         width: 100%;
-//         display: flex;
-//         justify-content: center;
-
-//         .card {
-//             width: 300px;
-//         }
-//     }
-// }
-
-// @media(max-height:1050px) {
-//     mat-card {
-//         transform: scale(0.9);
-//     }
-// }
-
-// @media(max-height:1010px) {
-//     mat-card {
-//         transform: scale(0.8);
-//     }
-
-//     main {
-//         margin-top: -70px;
-//     }
-// }
-
-// @media(max-height:900px) {
-//     mat-card {
-//         transform: scale(0.7);
-//     }
-
-//     main {
-//         margin-top: -100px;
-//     }
-// }
+section {
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
 
 .loginInputsContainer {
   margin-top: 30px;
@@ -267,62 +11,51 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-  margin-bottom: 40px;
+  gap: 25px;
+  margin-bottom: 30px;
   position: relative;
 
   .link {
     color: #797ef3;
-    padding: 8px 10px;
-
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
     &:hover {
-      cursor: pointer;
-      font-weight: 580;
-      background-color: rgb(241, 241, 241);
-      border: 1px solid rgb(241, 241, 241);
-      border-radius: 30px;
-      padding: 7px 10px;
+      font-weight: 500;
+      background-color: #eceefe;
     }
   }
 }
 
-section {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  transform: translate(-50%);
-  bottom: 300px;
-  min-height: 692px;
-  min-width: 80%;
-
-  main {
-    width: 80%;
-
-    mat-card {
-      height: 100%;
-      width: 80%;
-    }
-  }
+.main-section {
+  position: relative;
+  width: 100vw;
+  flex: 1;
 }
 
 main {
   display: flex;
   justify-content: center;
-}
-
-mat-card {
   background-color: white;
-  border-radius: 20px;
-  height: 100%;
+  max-width: 550px;
+  width: 90vw;
+  border-radius: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 475px;
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex: 1;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+  padding-block: 2rem;
+  height: 75vh;
+  max-height: 600px;
+  margin-top: -3rem;
   .info {
-    margin-top: 50px;
     padding: 0 40px;
     display: flex;
     flex-direction: column;
@@ -340,6 +73,7 @@ mat-card {
     .description {
       font-weight: 400;
       font-size: 16px;
+      text-align: center;
     }
   }
 }
@@ -349,24 +83,21 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
-
-  height: 100%;
   align-items: center;
   justify-content: center;
-  min-height: 475px;
 }
 
 .seperator {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 1rem;
   width: 100%;
-  margin-bottom: 40px;
+  font-size: 16px;
+  margin-bottom: 28px;
 }
 
 .underline {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #adb0d9;
   width: 100%;
 }
 
@@ -374,7 +105,7 @@ form {
   border-radius: 30px;
   border: 1px solid transparent;
   width: 100%;
-  height: 60px;
+  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -389,7 +120,7 @@ form {
   input {
     width: 80%;
     height: 80%;
-    font-size: 20px;
+    font-size: 16px;
     background-color: rgb(236, 238, 254);
     border: 0;
 
@@ -406,7 +137,7 @@ form {
 .googleLogin {
   border-radius: 30px;
   width: 100%;
-  height: 60px;
+  height: 48px;
   background-color: rgb(236, 238, 254);
   display: flex;
   border: 1px solid transparent;
@@ -414,8 +145,9 @@ form {
   align-items: center;
   color: #797ef3;
   margin-bottom: 40px;
-  gap: 10px;
-
+  gap: 20px;
+  font-size: 18px;
+  transition: all 150ms ease-in-out;
   img {
     width: 38px;
     height: auto;
@@ -435,8 +167,8 @@ form {
 
 .button {
   border-radius: 20px;
-  padding: 8px;
-  width: 150px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 700;
   border: 1px solid;
 
   &:hover {
@@ -446,9 +178,9 @@ form {
 
 .loginButton {
   color: white;
-  background-color: rgb(68, 77, 242);
+  background-color: #444df2;
   border-color: rgb(121, 126, 243);
-
+  transition: all 150ms ease-in-out;
   &:hover {
     background-color: rgba(121, 126, 243, 0.8);
   }
@@ -458,10 +190,10 @@ form {
   background-color: white;
   color: rgb(121, 126, 243);
   border-color: rgb(121, 126, 243);
-
+  transition: all 150ms ease-in-out;
   &:hover {
     color: white;
-    background-color: rgba(121, 126, 243, 0.8);
+    background-color: #444df2;
   }
 }
 
@@ -470,33 +202,25 @@ form {
   display: flex;
 }
 
+.passwordField {
+  position: relative;
+}
+
 .error {
-  color: red;
-  height: 20px;
   position: absolute;
-  top: 170px;
+  bottom: -1.5rem;
+  left: 0;
+  width: 100%;
+  color: #ed1e79;
+  font-size: 16px;
+}
+.footer {
+  height: 50px;
+  position: absolute;
+  bottom: 0;
 }
 
 @media (min-height: 1400px) {
-  section {
-    main {
-      mat-card {
-        .info {
-          font-size: 50px;
-
-          .title {
-            font-size: 80px;
-          }
-
-          .description {
-            font-size: 40px;
-            line-height: 70px;
-          }
-        }
-      }
-    }
-  }
-
   form {
     .inputField {
       height: 100px;
@@ -533,12 +257,6 @@ form {
   }
 }
 
-@media (max-width: 670px) {
-  section {
-    width: 80%;
-  }
-}
-
 @media (max-width: 510px) {
   .inputField {
     input {
@@ -548,67 +266,12 @@ form {
 }
 
 @media (max-width: 450px) {
-  section {
-    transform: scale(0.9) translate(-50%);
-  }
-
   .button {
     width: 110px;
   }
 }
 
-// @media(max-height:905px) and (min-width:610px) {
-//     section {
-//         transform: scale(0.9);
-//         transform: translate(-50%);
-//         top: 170px;
-//         justify-content: center;
-//     }
-// }
-
-@media (max-height: 975px) and (min-width: 610px) {
-  section {
-    transform: scale(0.9);
-    transform: translate(-50%);
-    top: 170px;
-    justify-content: center;
-  }
-}
-
-@media (max-height: 865px) and (min-width: 610px) {
-  section {
-    top: 110px;
-  }
-}
-
-@media (max-height: 805px) and (min-width: 610px) {
-  section {
-    transform: scale(0.7);
-    right: 10%;
-    left: 10%;
-    top: 10px;
-  }
-}
-
-@media (max-height: 1005px) and (max-width: 610px) {
-  section {
-    top: 100px;
-  }
-}
-
 @media (max-height: 908px) and (max-width: 610px) {
-  section {
-    transform: scale(0.8) translate(-62%);
-    top: 20px;
-    width: 115%;
-
-    main {
-      mat-card {
-        height: 90%;
-      }
-    }
-  }
-
   .googleLogin,
   .seperator,
   .loginInputsContainer {
@@ -632,13 +295,5 @@ form {
   form {
     margin-top: 30px;
     justify-content: flex-start;
-  }
-
-  section {
-    main {
-      mat-card {
-        height: 80%;
-      }
-    }
   }
 }

@@ -199,7 +199,6 @@ button {
   display: flex;
   align-items: center;
   flex-direction: column;
-  // justify-content: flex-start;
   box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.08);
   padding-inline: 1.5rem;
   gap: 1rem;
@@ -220,6 +219,7 @@ button {
       border-radius: 30px;
       height: 48px;
       width: 100%;
+      padding-left: 2rem;
     }
   }
 }

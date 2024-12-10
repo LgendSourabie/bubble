@@ -1,7 +1,7 @@
-<app-header></app-header>
 <section>
-  <main>
-    <mat-card class="card">
+  <app-header class="header" />
+  <div class="main-section">
+    <main>
       <div class="info">
         <div class="title">Anmeldung</div>
         <div class="description">Wir empfehlen dir, die E-Mail-Adresse zu nutzen, die du bei der Arbeit verwendest.</div>
@@ -9,16 +9,17 @@
       <form [formGroup]="loginForm">
         <div class="loginInputsContainer">
           <div class="inputField">
-            <mat-icon>mail</mat-icon>
+            <img src="assets/img/icons/login_mail.svg" alt="mail" />
             <input name="email" type="mail" placeholder="beispielname@email.com" formControlName="mail" />
           </div>
-          <div class="inputField">
-            <mat-icon>lock</mat-icon>
+          <div class="inputField passwordField">
+            <img src="assets/img/icons/lock.svg" alt="lock" />
             <input name="password" type="password" placeholder="Passwort" formControlName="password" />
+            <div class="error" *ngIf="mailError || passwordError">*E-Mail-Adresse oder Password fehlerhaft.</div>
           </div>
-          <div class="error">
-            <div *ngIf="mailError || passwordError">*E-Mail-Adresse oder Password fehlerhaft.</div>
-          </div>
+          <!-- <div class="error">
+          <div *ngIf="mailError || passwordError">*E-Mail-Adresse oder Password fehlerhaft.</div>
+        </div> -->
           <div class="link" [routerLink]="['newPassword']">Passwort vergessen?</div>
         </div>
         <div class="seperator">
@@ -35,7 +36,7 @@
           <div class="button guestLoginButton divAsButton" (click)="onGuestLogin()">Gäste-Login</div>
         </div>
       </form>
-    </mat-card>
-  </main>
+    </main>
+  </div>
+  <app-footer class="footer" />
 </section>
-<app-footer></app-footer>
