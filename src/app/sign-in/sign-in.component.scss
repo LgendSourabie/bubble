@@ -74,14 +74,27 @@ mat-card-content {
   height: 100%;
 
   .headline {
-    img {
+    display: flex;
+    align-items: center;
+    button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
       position: absolute;
-      left: 40px;
-      width: 24px;
-      height: auto;
-
+      left: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      border-color: transparent;
+      img {
+        left: 40px;
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+      }
       &:hover {
-        cursor: pointer;
+        background-color: #eceefe;
       }
     }
   }
@@ -98,11 +111,6 @@ mat-card-content {
       border-radius: 30px;
       padding: 7px 10px;
     }
-  }
-
-  .buttonContainer {
-    position: absolute;
-    bottom: 0;
   }
 }
 
@@ -192,7 +200,6 @@ main {
   border: 1px solid;
   color: white;
   background-color: rgb(68, 77, 242);
-  // border-color: rgb(121, 126, 243);
   font-size: 18px;
   font-weight: 700;
 }
@@ -200,7 +207,6 @@ main {
 .loginButton {
   background-color: #686868;
   color: white;
-  // border-color: rgb(121, 126, 243);
 }
 .policy {
   text-decoration: none;
@@ -212,7 +218,6 @@ main {
   flex-direction: column;
   margin-top: -30px;
   font-size: 18px;
-  gap: 3rem;
 
   input {
     margin-right: 20px;
@@ -284,7 +289,6 @@ main {
 
 @media (max-width: 450px) {
   .descriptionContainer {
-    // gap: 32px;
     height: 100%;
   }
 }
@@ -302,8 +306,10 @@ main {
         font-size: 34px;
       }
 
-      img {
-        left: 10px;
+      button {
+        img {
+          left: 10px;
+        }
       }
     }
   }
@@ -362,8 +368,6 @@ main {
 
 @media (max-height: 695px) {
   .mat-card {
-    // transform: scale(0.6);
-    // top: -40px;
     height: 100%;
   }
 

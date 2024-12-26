@@ -3,46 +3,32 @@ import { MatCardModule } from '@angular/material/card';
 import { FooterComponent } from '../footer/footer.component';
 import { MatIconModule } from '@angular/material/icon';
 import { Router, RouterModule } from '@angular/router';
-import { SignInComponent } from '../sign-in/sign-in.component';
 import { FormsModule, NgForm } from '@angular/forms';
 import { NgClass, NgIf } from '@angular/common';
-import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { FirebaseLoginService } from '../firebase_LogIn/firebase-login.service';
 import { PasswordResetService } from '../password_Reset/password-reset.service';
-import { getAuth, sendPasswordResetEmail } from "firebase/auth";
-
+import { getAuth } from 'firebase/auth';
 
 @Component({
   selector: 'app-new-password',
   standalone: true,
-  imports: [
-    MatCardModule,
-    FooterComponent,
-    MatIconModule,
-    RouterModule,
-    SignInComponent,
-    FormsModule,
-    NgIf,
-    NgClass
-  ],
+  imports: [MatCardModule, FooterComponent, MatIconModule, RouterModule, FormsModule, NgIf, NgClass],
   templateUrl: './new-password.component.html',
-  styleUrl: './new-password.component.scss'
+  styleUrl: './new-password.component.scss',
 })
 export class NewPasswordComponent {
-
   mailSent: boolean = false;
   wrongMail: boolean = false;
 
   email: string = '';
   message: string = '';
 
-  constructor(private router: Router, private firebase: FirebaseLoginService, private resetService: PasswordResetService) {
-
-  }
+  constructor(private router: Router, private firebase: FirebaseLoginService, private resetService: PasswordResetService) {}
 
   data = {
-    mail: ''
-  }
+    mail: '',
+  };
 
   mail: string = '';
   http = inject(HttpClient);
@@ -54,7 +40,7 @@ export class NewPasswordComponent {
    */
   async onSubmit(ngForm: NgForm) {
     this.email = ngForm.value.email;
-    if (await this.firebase.findUserWithRef("email", this.email)) {
+    if (await this.firebase.findUserWithRef('email', this.email)) {
       if (ngForm.valid && ngForm.submitted) {
         this.resetService.resetPassword(this.email);
         this.displayMailsentFeedback();
@@ -68,8 +54,8 @@ export class NewPasswordComponent {
   }
 
   /**
-  * This function sets the variable of the "mailsent"-Feedback to true, sothat the feedback will be displayed
-  */
+   * This function sets the variable of the "mailsent"-Feedback to true, sothat the feedback will be displayed
+   */
   displayMailsentFeedback() {
     this.mailSent = true;
   }
@@ -98,5 +84,4 @@ export class NewPasswordComponent {
       this.wrongMail = false;
     }, 2000);
   }
-
 }

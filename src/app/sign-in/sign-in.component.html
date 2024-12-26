@@ -8,7 +8,9 @@
     <div class="descriptionContainer">
       <form class="loginInputsContainer" (ngSubmit)="onSubmit()" #data="ngForm">
         <div class="headline">
-          <img class="arrowBack" src="./assets/img/01_onboarding-login-signup/arrow_back.png" [routerLink]="['/']" />
+          <button>
+            <img class="arrowBack" src="./assets/img/01_onboarding-login-signup/arrow_back.png" [routerLink]="['/']" />
+          </button>
           <mat-card-title>Konto erstellen</mat-card-title>
         </div>
         <span class="mat-card-title-group">Mit deinem Namen und deiner E-Mail-Adresse hast du dein neues DaBubble-Konto.</span>
@@ -37,7 +39,7 @@
           </div>
           <div class="errorContainer">
             @if(displayMailError && mailInput.touched){
-            <div class="errorText">*Diese E-Mail-Adresse ist leider ungültig oder bereits in Verwendung.</div>
+            <div class="errorText">*E-Mail-Adresse ungültig oder bereits in Verwendung.</div>
             }
           </div>
           <div class="inputField">
@@ -55,7 +57,7 @@
 
         <div class="checkPrivacyPolicyContainer">
           <div class="checkPrivacyPolicyContainerUpperContainer">
-            <input class="checkbox" name="privacyPolicy" type="checkbox" [(ngModel)]="privacyPolicy" (ngModelChange)="checkInputs()" #PrivacyPolicyInput="ngModel" />
+            <input class="checkbox" name="privacy-policy" type="checkbox" [(ngModel)]="privacyPolicy" (ngModelChange)="checkInputs()" #PrivacyPolicyInput="ngModel" />
             <div class="checkPrivacyPolicyText">Ich stimme der <a class="policy" routerLink="">Datenschutzerklärung</a> zu.</div>
           </div>
           <div class="errorContainer">

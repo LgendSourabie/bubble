@@ -9,14 +9,13 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component';
 import { MainComponentComponent } from './main-component/main-component.component';
 
-
 export const routes: Routes = [
-  { path: "", component: LoginComponent },
-  { path: "signIn", component: SignInComponent },
-  { path: "chooseAvatar/:id", component: ChooseAvatarComponent },
-  { path: "newPassword", component: NewPasswordComponent },
-  { path: "newPassword2", component: NewPassword2Component },
-  { path: "desktop/:id", component: MainComponentComponent },
-  { path: "imprint", component: ImprintComponent },
-  { path: "privacyPolicy", component: PrivacypolicyComponent },
+  { path: '', component: LoginComponent },
+  { path: 'sign-up', component: SignInComponent },
+  { path: 'avatar/:id', component: ChooseAvatarComponent },
+  { path: 'reset-password', component: NewPasswordComponent },
+  { path: 'newPassword2', component: NewPassword2Component },
+  { path: 'desktop/:id', component: MainComponentComponent },
+  { path: 'imprint', component: ImprintComponent },
+  { path: 'privacy-policy', component: PrivacypolicyComponent },
 ];

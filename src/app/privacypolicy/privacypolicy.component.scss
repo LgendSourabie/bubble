@@ -1,62 +1,92 @@
 .header-container {
-    position: absolute;
-    top: 90px;
-    left: 90px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    font-size: 24px;
-    font-weight: 700;
+  position: absolute;
+  top: 40px;
+  left: 90px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 20px;
+  font-weight: 700;
+
+  .name {
     transform: scale(1.2);
+    margin-left: 20px;
+    font-family: nunito, sans-serif;
+  }
 
+  &:hover {
+    cursor: default;
+  }
 
-    .name {
-        transform: scale(1.2);
-        margin-left: 20px;
-        font-family:nunito, sans-serif;
-    }
-
-    &:hover {
-        cursor: default;
-    }
-
-    img {
-        width: auto;
-        height: 70px;
-    }
+  img {
+    width: auto;
+    height: 70px;
+  }
 }
 
 section {
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  mat-card {
+    background-color: white;
+    height: auto;
+    width: auto;
+    border-radius: 30px;
+    padding: 48px 56px;
+
+    mat-card-content {
+      width: 100%;
+    }
+  }
+}
+
+main {
+  margin-inline: max(40px, calc(50% - 720px));
+  background-color: white;
+  padding: 2rem 3rem;
+  margin-block: 9rem 2rem;
+  border-radius: 30px;
+  font-size: 16px;
+
+  > button {
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-
-    mat-card {
-        background-color: white;
-        height: auto;
-        width: auto;
-        border-radius: 30px;
-        padding: 48px 56px;
-
-        mat-card-content {
-            width: 100%;
-        }
-    }
-}
-
-.arrowBack {
+    border: none;
+    background-color: transparent;
+    margin-bottom: 1.5rem;
     &:hover {
-        cursor: pointer;
-        filter: drop-shadow(2px 2px 1px gray);
+      background-color: #eeefff;
     }
+  }
 }
 
-.info{
-    position:absolute;
-    bottom:100px;
-    left:80px;
-    font-family:nunito, sans-serif;
-    font-weight:700;
-    font-size:32px;
+.info {
+  position: absolute;
+  bottom: 100px;
+  left: 80px;
+  font-family: nunito, sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+@media screen and (width<500px) {
+  main {
+    margin-inline: unset;
+    margin-top: 8rem;
+    padding-inline: 2rem;
+    border-radius: unset;
+  }
+  .header-container {
+    left: 30px;
+
+    img {
+      width: 55px;
+      height: 55px;
+    }
+  }
 }

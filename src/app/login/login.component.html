@@ -4,23 +4,21 @@
     <main>
       <div class="info">
         <div class="title">Anmeldung</div>
+        <div class="separator-line"></div>
         <div class="description">Wir empfehlen dir, die E-Mail-Adresse zu nutzen, die du bei der Arbeit verwendest.</div>
       </div>
       <form [formGroup]="loginForm">
         <div class="loginInputsContainer">
           <div class="inputField">
             <img src="assets/img/icons/login_mail.svg" alt="mail" />
-            <input name="email" type="mail" placeholder="beispielname@email.com" formControlName="mail" />
+            <input name="email" type="mail" placeholder="beispielname@mail.de" formControlName="mail" />
           </div>
           <div class="inputField passwordField">
             <img src="assets/img/icons/lock.svg" alt="lock" />
             <input name="password" type="password" placeholder="Passwort" formControlName="password" />
-            <div class="error" *ngIf="mailError || passwordError">*E-Mail-Adresse oder Password fehlerhaft.</div>
+            <div class="error" *ngIf="mailError || passwordError">E-Mail oder Passwort fehlerhaft.</div>
           </div>
-          <!-- <div class="error">
-          <div *ngIf="mailError || passwordError">*E-Mail-Adresse oder Password fehlerhaft.</div>
-        </div> -->
-          <div class="link" [routerLink]="['newPassword']">Passwort vergessen?</div>
+          <div class="link" [routerLink]="['reset-password']">Passwort vergessen?</div>
         </div>
         <div class="seperator">
           <div class="underline"></div>
@@ -33,7 +31,7 @@
         </div>
         <div class="buttonContainer">
           <button type="button" class="button loginButton" (click)="login()">Anmelden</button>
-          <div class="button guestLoginButton divAsButton" (click)="onGuestLogin()">Gäste-Login</div>
+          <button type="button" class="button guestLoginButton divAsButton" (click)="onGuestLogin()">Gäste-Login</button>
         </div>
       </form>
     </main>

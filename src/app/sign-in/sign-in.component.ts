@@ -136,7 +136,7 @@ export class SignInComponent implements OnInit {
       this.setData();
       let user = this.firebase.setUserObject(this.data);
       let id = await this.firebase.addUserInAuth(user.mail, user.password, user.name);
-      this.router.navigate(['/chooseAvatar', id]);
+      this.router.navigate(['/avatar', id]);
       this.emptyAllInputs();
       this.onAddChannel(id);
     } else {
