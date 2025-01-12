@@ -3,7 +3,7 @@ import { MatCardModule } from '@angular/material/card';
 import { FooterComponent } from '../footer/footer.component';
 import { MatIconModule } from '@angular/material/icon';
 import { Router, RouterModule } from '@angular/router';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { NgClass } from '@angular/common';
 import { FirebaseLoginService } from '../firebase_LogIn/firebase-login.service';
 import { Channel, ChannelMember } from '../modules/database.model';

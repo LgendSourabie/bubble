@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, EventEmitter, HostListener, OnDestroy, OnInit, Output, ViewChild, inject } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild, inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { ChatareaServiceService } from '../../firestore-service/chatarea-service.service';
 import { CommonModule } from '@angular/common';
@@ -7,7 +7,6 @@ import { FileUploadService } from '../../firestore-service/file-upload.service';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { User } from '../../models/user/user.model';
-import { MainServiceService } from '../../firestore-service/main-service.service';
 import { AuthService } from '../../firestore-service/auth.service';
 import { Subject, Subscription, filter } from 'rxjs';
 import { EmojiService } from '../../modules/emoji.service';
@@ -75,7 +74,7 @@ export class MessageBoxComponent implements AfterViewInit, OnInit, OnDestroy {
     private authService: AuthService,
     private channelService: ChannelService,
     private currentGuest: CurrentUserService
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.uidSubscription = this.authService.getUIDObservable().subscribe((uid: string | null) => {
@@ -187,7 +186,6 @@ export class MessageBoxComponent implements AfterViewInit, OnInit, OnDestroy {
     if (this.linkDialog && this.showUsers) {
       this.linkDialog = false;
       this.showUsers = false;
-
     } else {
       this.linkDialog = true;
       this.showUsers = true;

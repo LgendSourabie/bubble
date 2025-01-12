@@ -44,14 +44,14 @@ export class LoginComponent implements OnInit {
     private firestore: Firestore,
     private auth: Auth,
     private currentUserService: CurrentUserService
-  ) { }
+  ) {}
 
   loginForm!: FormGroup;
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
-      mail: ['', [Validators.required, Validators.email]],  // Validierung für Mail
-      password: ['', [Validators.required, Validators.minLength(6)]]  // Validierung für Passwort
+      mail: ['', [Validators.required, Validators.email]], // Validierung für Mail
+      password: ['', [Validators.required, Validators.minLength(6)]], // Validierung für Passwort
     });
 
     this.currentUserService.onlineUser$.subscribe(user => {
@@ -69,7 +69,6 @@ export class LoginComponent implements OnInit {
    * This function checks, if there is a account of the user. If yes the user will be logged in and will be send to the desktop-page
    */
   async login() {
-
     if (this.loginForm.invalid) {
       this.displayWrongMailOrPasswordErrorMessage();
       return;
@@ -178,8 +177,9 @@ export class LoginComponent implements OnInit {
       {
         name: user.displayName,
         email: user.email,
-        avatar: user.photoURL,
-        online: false,
+        id: user.uid,
+        avatar: 'assets/img/profiles/google_avatar.svg', //user.photoURL
+        online: true,
       },
       { merge: true }
     );

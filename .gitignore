@@ -5,7 +5,7 @@
 /tmp
 /out-tsc
 /bazel-out
-
+/scripts/deployment_commands.txt
 # Node
 /node_modules
 /server

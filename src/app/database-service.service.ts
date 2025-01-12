@@ -293,10 +293,6 @@ export class DatabaseServiceService {
     });
   }
 
-  // authenticatedUser(): Observable<User> {
-  //   return this.snapUsers().pipe(map(users => users.filter(user => user.online === true)[0]));
-  // }
-
   async authUser(userId: string | undefined) {
     if (userId) {
       const userRef = doc(this.getUsersRef(), userId);

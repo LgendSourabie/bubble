@@ -9,7 +9,7 @@
     </div>
     <div class="current-user">
       @if(authenticatedUser){
-      <span class="to_upper">{{ authenticatedUser.name }}</span>
+      <span class="to_upper">{{ authenticatedUser.name.split(' ')[0] }}</span>
       <app-profile
         class="app-profile dDestop"
         [left_side_profile]="false"
