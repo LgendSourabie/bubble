@@ -7,9 +7,11 @@ import { NewPassword2Component } from './new-password2/new-password2.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component';
 import { MainComponentComponent } from './main-component/main-component.component';
+import { StartpageComponent } from './components/startpage/startpage.component';
 
 export const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', component: StartpageComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'sign-up', component: SignInComponent },
   { path: 'avatar/:id', component: ChooseAvatarComponent },
   { path: 'reset-password', component: NewPasswordComponent },
@@ -17,4 +19,5 @@ export const routes: Routes = [
   { path: 'desktop/:id', component: MainComponentComponent },
   { path: 'imprint', component: ImprintComponent },
   { path: 'privacy-policy', component: PrivacypolicyComponent },
+  { path: '**', redirectTo: '' },
 ];

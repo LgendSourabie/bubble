@@ -13,67 +13,67 @@
   z-index: 900;
 }
 
-// @keyframes intro {
-//   0% {
-//     z-index: 900;
-//     opacity: 1;
-//   }
+@keyframes intro {
+  0% {
+    z-index: 900;
+    opacity: 1;
+  }
 
-//   10% {
-//     opacity: 0.9;
-//   }
+  10% {
+    opacity: 0.9;
+  }
 
-//   20% {
-//     opacity: 0.8;
-//   }
+  20% {
+    opacity: 0.8;
+  }
 
-//   30% {
-//     opacity: 0.7;
-//   }
+  30% {
+    opacity: 0.7;
+  }
 
-//   40% {
-//     opacity: 0.6;
-//   }
+  40% {
+    opacity: 0.6;
+  }
 
-//   50% {
-//     opacity: 0.5;
-//   }
+  50% {
+    opacity: 0.5;
+  }
 
-//   60% {
-//     opacity: 0.4;
-//   }
+  60% {
+    opacity: 0.4;
+  }
 
-//   70% {
-//     opacity: 0.3;
-//   }
+  70% {
+    opacity: 0.3;
+  }
 
-//   80% {
-//     opacity: 0.2;
-//   }
+  80% {
+    opacity: 0.2;
+  }
 
-//   90% {
-//     opacity: 0.1;
-//   }
+  90% {
+    opacity: 0.1;
+  }
 
-//   100% {
-//     z-index: 0;
-//     opacity: 0;
-//     pointer-events: none;
-//   }
-// }
+  100% {
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
 
-// @keyframes logoContainerMovement {
-//   0% {
-//     top: 50%;
-//     transform: translate-y(-50%);
-//     // left: 50%;
-//   }
+@keyframes logoContainerMovement {
+  0% {
+    top: 50%;
+    transform: translate-y(-50%);
+    // left: 50%;
+  }
 
-//   100% {
-//     top: 10px;
-//     left: 275px;
-//   }
-// }
+  100% {
+    top: 10px;
+    left: 275px;
+  }
+}
 
 .loginLogo {
   //Ausgangsposition - mittig - Schritt 1
@@ -82,12 +82,12 @@
   align-items: center;
   gap: 60px;
   position: absolute;
-  top: 10px;
-  left: 275px;
+  top: 50%;
+  left: 55%;
   width: 400px;
   height: 100px;
-
-  // animation: logoContainerMovement 2s ease-in-out 3s forwards;
+  transform: translate(-50%);
+  animation: logoContainerMovement 2s ease-in-out 3s forwards;
 
   img {
     z-index: 998;
@@ -99,7 +99,7 @@
 
   .name {
     z-index: 998;
-    color: black;
+    color: white;
     font-weight: 700;
     font-size: 24px;
     transform: scale(1.5);

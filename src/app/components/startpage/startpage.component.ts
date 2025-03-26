@@ -1,34 +1,43 @@
-import { CurrentUserService } from './../modules/current-user.service';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FirebaseLoginService } from '../../firebase_LogIn/firebase-login.service';
+import { GuestService } from '../../modules/guest.service';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Channel } from '../../modules/database.model';
+import { DatabaseServiceService } from '../../database-service.service';
+import { Router, RouterModule } from '@angular/router';
+import { Firestore } from '@angular/fire/firestore';
+import { CurrentUserService } from '../../modules/current-user.service';
+import { Auth } from '@angular/fire/auth';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { Router, RouterModule } from '@angular/router';
-import { FooterComponent } from '../footer/footer.component';
-import { FormsModule } from '@angular/forms';
-import { FirebaseLoginService } from '../firebase_LogIn/firebase-login.service';
-import { NgIf } from '@angular/common';
-import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
-import { doc, getDoc, getFirestore, setDoc, updateDoc } from 'firebase/firestore';
-import { UserService } from '../service/user.service/user.service';
-import { Firestore } from '@angular/fire/firestore';
-import { Auth } from '@angular/fire/auth';
-import { DatabaseServiceService } from '../database-service.service';
-import { Channel } from '../modules/database.model';
-import { GuestService } from '../modules/guest.service';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AnimatedHeaderComponent } from '../animated-header/animated-header.component';
-import { HeaderComponent } from '../header/header.component';
+import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
+import { UserService } from '../../service/user.service/user.service';
+import { FooterComponent } from '../../footer/footer.component';
+import { HeaderComponent } from '../../header/header.component';
+import { CommonModule } from '@angular/common';
+import { AnimatedHeaderComponent } from '../../animated-header/animated-header.component';
 @Component({
-  selector: 'app-login',
+  selector: 'app-startpage',
   standalone: true,
-  imports: [MatToolbarModule, MatCardModule, MatIconModule, MatFormFieldModule, RouterModule, FooterComponent, FormsModule, NgIf, ReactiveFormsModule, HeaderComponent],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.scss',
+  imports: [
+    MatToolbarModule,
+    MatCardModule,
+    MatIconModule,
+    MatFormFieldModule,
+    RouterModule,
+    FooterComponent,
+    FormsModule,
+    CommonModule,
+    ReactiveFormsModule,
+    AnimatedHeaderComponent,
+  ],
+  templateUrl: './startpage.component.html',
+  styleUrl: './startpage.component.scss',
 })
-export class LoginComponent implements OnInit {
+export class StartpageComponent {
   mail: string = '';
   password: string = '';
   displayWrongMailOrPasswordError: boolean = false;
@@ -50,8 +59,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
-      mail: ['', [Validators.required, Validators.email]], // Validierung für Mail
-      password: ['', [Validators.required, Validators.minLength(6)]], // Validierung für Passwort
+      mail: ['', [Validators.required, Validators.email]], //Email validation
+      password: ['', [Validators.required, Validators.minLength(6)]], // Password validation
     });
 
     this.currentUserService.onlineUser$.subscribe(user => {
